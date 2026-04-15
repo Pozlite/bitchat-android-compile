@@ -15,6 +15,10 @@ android {
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 33
         versionName = "1.7.2"
+        ndk {
+    abiFilters "arm64-v8a" // Removes old 32-bit bloat
+        }
+
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
